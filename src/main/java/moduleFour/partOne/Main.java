@@ -13,7 +13,7 @@ public class Main {
             try {
                 System.out.print(message);
                 Scanner scanner = new Scanner(System.in);
-                return scanner.nextInt();
+                return scanner.nextFloat();
             } catch (Exception E) {
                 System.out.println("Wrong input");
             }
