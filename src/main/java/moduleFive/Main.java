@@ -12,12 +12,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
 
-        Array array = new Array();
-        array.setSize(selection);
+        Array newArray = new Array();
+        newArray.setSize(selection);
 
-        array.initArray(selection);
+        int[] inputArray = newArray.initArray(selection);
 
-        //array.printArray();
+        System.out.println("Your input array is:");
+        newArray.printArray(inputArray);
+
+        QuickSort makeSort = new QuickSort();
+
+        int[] outputArray =makeSort.quickSort(inputArray,0,inputArray.length-1);
+        System.out.println("Your sorted array is:");
+        newArray.printArray(outputArray);
+
+        System.out.println("min and max elements are:");
+        System.out.println("min: "+outputArray[0]);
+        System.out.println("max: "+outputArray[outputArray.length-1]);
 
     }
 

@@ -1,34 +1,40 @@
 package moduleFive;
-import static java.lang.Math.*;
+
+import static java.lang.Math.random;
+
 /**
  * Created by User on 13.03.2016.
  */
 public class QuickSort {
 
-    public void Sort(int array[], int first, int last){
-
+    public int reshuffle(int array[], int first, int last) {
         int i = first, j = last;
-        int pivot = first + (int)(random() * ((last - first) + 1));
+        int temp;
+        int support = array[first + (int)(random() * ((last - first) + 1))];
 
-        while (i < j) {
-            while (i < pivot && (array[i] <= array[pivot])) {
+        while (i <= j) {
+            while (array[i] < support)
                 i++;
-            }
-            while (j > pivot && (array[pivot] <= array[j])) {
+            while (array[j] > support)
                 j--;
-            }
-            if (i < j) {
-                int temp = array[i];
+            if (i <= j) {
+                temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
-                if (i == pivot)
-                    pivot = j;
-                else if (j == pivot)
-                    pivot = i;
+                i++;
+                j--;
             }
-        }
-        Sort(array, first, pivot);
-        Sort(array, pivot+1, last);
+        };
+
+        return i;
     }
-     
+
+    public int[] quickSort(int array[], int first, int last) {
+        int index = reshuffle(array, first, last);
+        if (first < index - 1)
+            quickSort(array, first, index - 1);
+        if (index < last)
+            quickSort(array, index, last);
+        return array;
+    }
 }
