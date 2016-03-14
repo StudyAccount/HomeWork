@@ -17,7 +17,6 @@ public class Main {
 
         array.initArray(selection);
 
-
         //array.printArray();
 
     }
