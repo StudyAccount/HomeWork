@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Select arrays length: ");
+        System.out.print("Select arrays length: ");
         Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
 
@@ -17,7 +17,8 @@ public class Main {
 
         array.initArray(selection);
 
-      //  array.printArray(selection,);
+
+        //array.printArray();
 
     }
 

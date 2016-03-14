@@ -20,17 +20,17 @@ public class Array {
     }
 
     public void initArray(int size) {
-        int[] array = new int[size];
+        int[] inputArray = new int[size];
         for (int i = 0; i <size; i++) {
             Random rand = new Random();
-            array[i] = rand.nextInt();
-            System.out.println(array[i]);
+            inputArray[i] = rand.nextInt();
+            System.out.println(inputArray[i]);
         }
     }
 
-    public void printArray(int size,int[] array) {
+    public void printArray(int array[]) {
 
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");
 
         }
