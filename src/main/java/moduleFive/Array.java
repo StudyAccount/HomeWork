@@ -24,7 +24,6 @@ public class Array {
         for (int i = 0; i <size; i++) {
             Random rand = new Random();
             inputArray[i] = rand.nextInt();
-            System.out.println(inputArray[i]);
         }
         return inputArray;
     }

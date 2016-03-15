@@ -6,11 +6,22 @@ import java.util.Scanner;
  * Created by User on 13.03.2016.
  */
 public class Main {
+
+    private static int readInt(String message){
+        while(true) {
+            try {
+                System.out.print(message);
+                Scanner scanner = new Scanner(System.in);
+                return scanner.nextInt();
+            } catch (Exception E) {
+                System.out.println("You have to type int expression, try again");
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
-        System.out.print("Select arrays length: ");
-        Scanner scanner = new Scanner(System.in);
-        int selection = scanner.nextInt();
+        int selection = readInt("Select arrays length: ");
 
         Array newArray = new Array();
         newArray.setSize(selection);
