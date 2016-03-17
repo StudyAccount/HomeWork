@@ -1,4 +1,4 @@
-package moduleFive;
+package modulefive;
 
 import static java.lang.Math.random;
 

@@ -1,7 +1,5 @@
-package moduleFive;
+package modulefive;
 
-import javax.sound.midi.Soundbank;
-import java.util.Arrays;
 import java.util.Random;
 
 /**
