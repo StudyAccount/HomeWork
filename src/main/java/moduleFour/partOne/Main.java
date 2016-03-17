@@ -1,7 +1,6 @@
 package moduleFour.partOne;
 
 import java.util.Scanner;
-import java.util.concurrent.Callable;
 
 /**
  * Created by User on 13.03.2016.
