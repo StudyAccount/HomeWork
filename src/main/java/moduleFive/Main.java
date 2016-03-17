@@ -1,4 +1,4 @@
-package moduleFive;
+package modulefive;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
             } catch (Exception E) {
-                System.out.println("You have to type int expression, try again");
+                System.out.println("You have to type integer expression, try again");
             }
         }
     }
