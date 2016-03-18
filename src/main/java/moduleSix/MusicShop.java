@@ -27,7 +27,7 @@ public class MusicShop {
         instruments.add(instrument);
     }
 
-    Map<String, Integer> order =new HashMap<String, Integer>();
+    Map<String, Integer> order = new HashMap<String, Integer>();
 
     public List<Instrument> prepareInstruments(Map<String, Integer> order) {
         ArrayList<Instrument> result = new ArrayList<Instrument>();
@@ -48,7 +48,23 @@ public class MusicShop {
         return result;
     }
 
-    public static ArrayList<Instrument> availableInstruments(){
+    public static void sellInstruments ( Map<String,Integer> order){
+        for (Map.Entry<String,Integer>orderEntry :order.entrySet()) {
+            String instrumentType = orderEntry.getKey();
+            Integer numberOfInstrumentsToBeRemoved = orderEntry.getValue();
+            int numberOfAnimalsRemoved=0;
+            Iterator<Instrument> iterator = MusicShop.getInstruments().iterator();
+            while (iterator.hasNext()){
+                Instrument instrument = iterator.next();
+                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved){
+                    iterator.remove();
+                    numberOfAnimalsRemoved++;
+                }
+            }
+        }
+    }
+
+    public static List<Instrument> availableInstruments(){
         ArrayList<Instrument> result = new ArrayList<Instrument>();
         if (!instruments.isEmpty()){
             for (Instrument instrumentsAvailable : instruments) {

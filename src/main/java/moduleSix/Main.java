@@ -40,13 +40,18 @@ public class Main {
         Map<String, Integer> order3 = shop.order;
         order3.put("Trumpet",1);
 
-        shop.prepareInstruments(order1);
-       // shop.prepareInstruments(order2);
-        //shop.prepareInstruments(order3);
-
+        System.err.println("<<< was >>>");
         shop.availableInstruments();
 
+        shop.prepareInstruments(order1);
 
+        //shop.prepareInstruments(order3);
+        System.err.println("<<< was after 1 order >>>");
+        shop.availableInstruments();
+
+        shop.prepareInstruments(order2);
+        System.err.println("<<< was after 2 order >>>");
+        shop.availableInstruments();
     }
 
 }
