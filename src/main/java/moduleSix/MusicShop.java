@@ -1,14 +1,21 @@
-package modulesix;
+package moduleSix;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by User on 17.03.2016.
  */
 public class MusicShop {
 
-    protected List<Instrument> instruments = new ArrayList<Instrument>();
+    protected static List<Instrument> instruments = new ArrayList<Instrument>();
+
+    public static List<Instrument> getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(List<Instrument> instruments) {
+        this.instruments = instruments;
+    }
 
     protected float revenue;
 
@@ -16,20 +23,40 @@ public class MusicShop {
         return revenue;
     }
 
-    public void setRevenue(float revenue) {
-        this.revenue = revenue;
-    }
-
     public void addInstrument(Instrument instrument){
         instruments.add(instrument);
     }
 
-    public void sellInstrument(Instrument instrument){
+    Map<String, Integer> order =new HashMap<String, Integer>();
 
+    public List<Instrument> prepareInstruments(Map<String, Integer> order) {
+        ArrayList<Instrument> result = new ArrayList<Instrument>();
+
+        for (Map.Entry<String,Integer> orderEntry:order.entrySet()) {
+            String instrumentType = orderEntry.getKey();
+            Integer numberOfInstrumentsToBeRemoved = orderEntry.getValue();
+            int numberOfAnimalsRemoved=0;
+            for (Instrument instrument : MusicShop.getInstruments()) {
+                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved){
+                    result.add(instrument);
+                    numberOfAnimalsRemoved++;
+                }
+            }
+            if (numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved)
+                throw new IllegalArgumentException("Shop does not have enough " + instrumentType + "s");
+        }
+        return result;
     }
 
-    public void sale(Instrument instruments) {
-
-
+    public static ArrayList<Instrument> availableInstruments(){
+        ArrayList<Instrument> result = new ArrayList<Instrument>();
+        if (!instruments.isEmpty()){
+            for (Instrument instrumentsAvailable : instruments) {
+                instrumentsAvailable.lot();
+            }
+        }
+        return result;
     }
+
+
 }
