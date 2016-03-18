@@ -5,11 +5,12 @@ package modulesix;
  */
 public class Trumpet extends Instrument {
     public Trumpet(String name, String manufacturer, int price) {
-        super("Trumpet", manufacturer, price);
+        super(name, manufacturer, price);
     }
 
     @Override
-    public void sound() {
-        System.out.println("Has a trumpet sound");
+    public void setName(String name) {
+        super.setName("Trumpet");
     }
+
 }

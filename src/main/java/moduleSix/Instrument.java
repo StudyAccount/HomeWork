@@ -40,8 +40,7 @@ public abstract class Instrument {
     }
 
     public void lot(){
-        System.out.println("*" + name + " " + manufacturer + " " + price);
+        System.out.println("* " + name + " " + manufacturer + " " + price);
     }
 
-    public abstract void sound();
 }

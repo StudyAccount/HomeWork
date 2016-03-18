@@ -33,13 +33,13 @@ public class Main {
 
         QuickSort makeSort = new QuickSort();
 
-        int[] outputArray =makeSort.quickSort(inputArray,0,inputArray.length-1);
+        int[] outputArray =makeSort.quickSort(inputArray,0,inputArray.length - 1);
         System.out.println("Your sorted array is:");
         newArray.printArray(outputArray);
 
         System.out.println("min and max elements are:");
-        System.out.println("min: "+outputArray[0]);
-        System.out.println("max: "+outputArray[outputArray.length-1]);
+        System.out.println("min: " + outputArray[0]);
+        System.out.println("max: " + outputArray[outputArray.length - 1]);
 
     }
 
