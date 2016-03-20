@@ -29,29 +29,35 @@ public class Main {
         shop.addInstrument(instrument4);
         shop.addInstrument(instrument5);
         shop.addInstrument(instrument6);
+        shop.addInstrument(instrument8);
+
+        System.out.println("<<< Instruments in the shop >>>");
+        shop.availableInstruments();
 
         Map<String, Integer> order1 = shop.order;
         order1.put("Guitar",4);
         order1.put("Piano",1);
 
+        try {
+            shop.prepareInstruments(order1);
+            shop.sellInstruments(order1);
+            System.out.println("<<< Instruments in the shop after 1 order >>>");
+            shop.availableInstruments();
+        } catch(Exception e){
+            System.err.println(e.getMessage());
+        }
+
         Map<String, Integer> order2 = shop.order;
         order2.put("Guitar",2);
 
-        Map<String, Integer> order3 = shop.order;
-        order3.put("Trumpet",1);
-
-        System.err.println("<<< was >>>");
-        shop.availableInstruments();
-
-        shop.prepareInstruments(order1);
-
-        //shop.prepareInstruments(order3);
-        System.err.println("<<< was after 1 order >>>");
-        shop.availableInstruments();
-
-        shop.prepareInstruments(order2);
-        System.err.println("<<< was after 2 order >>>");
-        shop.availableInstruments();
+        try {
+            shop.prepareInstruments(order2);
+            shop.sellInstruments(order2);
+            System.out.println("<<< Instruments in the shop after 2 order >>>");
+            shop.availableInstruments();
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+        }
     }
 
 }

@@ -32,31 +32,35 @@ public class MusicShop {
     public List<Instrument> prepareInstruments(Map<String, Integer> order) {
         ArrayList<Instrument> result = new ArrayList<Instrument>();
 
-        for (Map.Entry<String,Integer> orderEntry:order.entrySet()) {
+        for (Map.Entry<String,Integer> orderEntry : order.entrySet()) {
             String instrumentType = orderEntry.getKey();
             Integer numberOfInstrumentsToBeRemoved = orderEntry.getValue();
-            int numberOfAnimalsRemoved=0;
+            int numberOfInstrumentsRemoved=0;
+
             for (Instrument instrument : MusicShop.getInstruments()) {
-                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved){
+                if (instrument.getName().equals(instrumentType)&& numberOfInstrumentsRemoved < numberOfInstrumentsToBeRemoved){
                     result.add(instrument);
-                    numberOfAnimalsRemoved++;
+                    numberOfInstrumentsRemoved++;
                 }
             }
-            if (numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved)
-                throw new IllegalArgumentException("Shop does not have enough " + instrumentType + "s");
+            if (numberOfInstrumentsRemoved < numberOfInstrumentsToBeRemoved) {
+                throw new IllegalArgumentException("Shop does not have enough " + instrumentType + "s\n"
+                        + "Available " + instrumentType + "s are: " + numberOfInstrumentsRemoved);
+            }
         }
         return result;
     }
 
     public static void sellInstruments ( Map<String,Integer> order){
-        for (Map.Entry<String,Integer>orderEntry :order.entrySet()) {
+
+        for (Map.Entry<String,Integer>orderEntry : order.entrySet()) {
             String instrumentType = orderEntry.getKey();
             Integer numberOfInstrumentsToBeRemoved = orderEntry.getValue();
-            int numberOfAnimalsRemoved=0;
+            int numberOfAnimalsRemoved = 0;
             Iterator<Instrument> iterator = MusicShop.getInstruments().iterator();
             while (iterator.hasNext()){
                 Instrument instrument = iterator.next();
-                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved<numberOfInstrumentsToBeRemoved){
+                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved <  numberOfInstrumentsToBeRemoved){
                     iterator.remove();
                     numberOfAnimalsRemoved++;
                 }

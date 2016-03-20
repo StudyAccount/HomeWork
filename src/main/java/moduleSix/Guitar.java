@@ -6,12 +6,16 @@ package moduleSix;
 public class Guitar extends Instrument {
 
     public Guitar(String name, String manufacturer, int price){
-        super(name, manufacturer, price);
+        super("Guitar", manufacturer, price);
     }
 
     @Override
-    public void setName(String name) {
-        super.setName("Guitar");
+    public String getName() {
+        return "Guitar";
     }
+//    @Override
+//    public void setName(String name) {
+//        super.setName("Guitar");
+//    }
 
 }
