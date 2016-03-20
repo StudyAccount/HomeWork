@@ -14,7 +14,7 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextFloat();
             } catch (Exception E) {
-                System.out.println("Wrong inpu t");
+                System.out.println("Wrong input");
             }
         }
     }
