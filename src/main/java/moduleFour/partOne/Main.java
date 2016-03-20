@@ -13,8 +13,10 @@ public class Main {
                 System.out.print(message);
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextFloat();
-            } catch (Exception E) {
-                System.out.println("Wrong input");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }catch (Exception e){
+                System.out.println("Something went wrong");
             }
         }
     }

@@ -13,8 +13,10 @@ public class Main {
                 System.out.print(message);
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
-            } catch (Exception E) {
-                System.out.println("You have to type integer expression, try again");
+            } catch (NegativeArraySizeException e) {
+                System.out.println(e.getMessage());
+            } catch (Exception e){
+                System.out.println("You have entered not Integer number");
             }
         }
     }
@@ -22,6 +24,11 @@ public class Main {
     public static void main(String[] args) {
 
         int selection = readInt("Select arrays length: ");
+
+        if (selection <= 0) {
+            throw new NegativeArraySizeException("You have type a negative number of array's members ");
+        }
+
 
         Array newArray = new Array();
         newArray.setSize(selection);

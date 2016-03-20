@@ -9,23 +9,32 @@ public class AreaCount {
 
     public double triangleSquare(double firstSide, double secondSide, double thirdSide){
 
-        if(firstSide < 0 || secondSide < 0 || thirdSide < 0 || (firstSide+secondSide)<thirdSide || (firstSide+thirdSide)<secondSide || (secondSide+thirdSide)<firstSide) {
-            System.out.println("Wrong values");
+        double square = 0;
+
+        if(firstSide < 0 || secondSide < 0 || thirdSide < 0) {
+            throw new IllegalArgumentException("Triangle cannot have negative side[-s]");
         }
-        double p = (firstSide + secondSide + thirdSide) / 2;
-        return sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));
+
+        if ((firstSide + secondSide )< thirdSide || (firstSide + thirdSide) < secondSide || (secondSide + thirdSide) < firstSide){
+            System.out.println("Your rectangle could not exist");
+        } else {
+            double p = (firstSide + secondSide + thirdSide) / 2;
+            square = sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));
+        }
+        return square;
+
     }
 
     public double rectangleSquare(double firstSide, double secondSide){
         if (firstSide < 0 || secondSide < 0){
-            System.out.println("Wrong values");
+            throw new IllegalArgumentException("Rectangle cannot have negative side[-s]");
         }
         return firstSide*secondSide;
     }
 
     public double circleSquare(double radius){
         if (radius < 0){
-            System.out.println("Wrong values");
+            throw new IllegalArgumentException("Circle cannot have negative radius");
         }
         return PI*pow(radius,2);
     }

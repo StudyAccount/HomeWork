@@ -14,7 +14,7 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextFloat();
             } catch (Exception E) {
-                System.out.println("Wrong input");
+                System.out.println("Wrong inpu t");
             }
         }
     }
@@ -33,7 +33,7 @@ public class Main {
 
             TemperatureConverter temperatureInFahrenheit= new TemperatureConverter();
             float result = temperatureInFahrenheit.convertCelsiusToFahrenheit(temperatureInCelsius);
-            System.out.println("Current temperature in Fahrenheit is "+ result);
+            System.out.println("Current temperature in Fahrenheit is " + result);
         }else
 
         if(selection.equals("2")){
@@ -43,7 +43,7 @@ public class Main {
 
             TemperatureConverter temperatureInCelsius = new TemperatureConverter();
             float result = temperatureInCelsius.convertFahrenheitToCelsius(temperatureInFahrenheit);
-            System.out.println("Current temperature in Celsius is "+ result);
+            System.out.println("Current temperature in Celsius is " + result);
         } else {
 
             System.out.println("Entered incorrect value");

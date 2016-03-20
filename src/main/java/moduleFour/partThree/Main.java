@@ -14,7 +14,7 @@ public class Main {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
             } catch (Exception E) {
-                System.out.println("Wrong input");
+                System.out.println("You have to print Integer values");
             }
         }
     }

@@ -10,8 +10,8 @@ public class TemperatureConverter {
     }
 
     public float convertFahrenheitToCelsius(Temperature temperature){
-        float farenheitTemperature = 9*temperature.getTemperature()/5+32;
-        return farenheitTemperature;
+        float fahrenheitTemperature = 9*temperature.getTemperature()/5 + 32;
+        return fahrenheitTemperature;
 
     }
 }
