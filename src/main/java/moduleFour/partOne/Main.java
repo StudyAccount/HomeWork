@@ -15,7 +15,7 @@ public class Main {
                 return scanner.nextFloat();
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
-            }catch (Exception e){
+            } catch (Exception e){
                 System.out.println("Something went wrong");
             }
         }

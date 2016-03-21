@@ -4,9 +4,9 @@ package moduleFour.partOne;
  * Created by User on 13.03.2016.
  */
 public class Triangle {
-    public double firstSide;
-    public double secondSide;
-    public double thirdSide;
+    private double firstSide;
+    private double secondSide;
+    private double thirdSide;
 
     public Triangle(double firstSide, double secondSide, double thirdSide) {
         this.firstSide = firstSide;

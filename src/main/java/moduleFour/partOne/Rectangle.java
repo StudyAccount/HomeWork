@@ -4,8 +4,8 @@ package moduleFour.partOne;
  * Created by User on 13.03.2016.
  */
 public class Rectangle {
-    public double firstSide;
-    public double secondSide;
+    private double firstSide;
+    private double secondSide;
 
     public Rectangle(double firstSide, double secondSide) {
         this.firstSide = firstSide;

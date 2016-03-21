@@ -4,8 +4,8 @@ package moduleFour.partThree;
  * Created by User on 13.03.2016.
  */
 public class Point {
-    protected int xCoordinate;
-    protected int yCoordinate;
+    private int xCoordinate;
+    private int yCoordinate;
 
     public Point(int xCoordinate, int yCoordinate) {
         this.xCoordinate = xCoordinate;
