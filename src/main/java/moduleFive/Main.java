@@ -40,7 +40,7 @@ public class Main {
 
         QuickSort makeSort = new QuickSort();
 
-        int[] outputArray =makeSort.quickSort(inputArray,0,inputArray.length - 1);
+        int[] outputArray = makeSort.quickSort(inputArray,0,inputArray.length - 1);
         System.out.println("Your sorted array is:");
         newArray.printArray(outputArray);
 

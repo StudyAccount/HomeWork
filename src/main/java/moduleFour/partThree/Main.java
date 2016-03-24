@@ -29,10 +29,10 @@ public class Main {
         Point firstPoint = new Point(firstPointXCoordinate,firstPointYCoordinate);
         Point secondPoint = new Point(secondPointXCoordinate,secondPointYCoordinate);
 
-        firstPoint.setxCoordinate(firstPointXCoordinate);
-        firstPoint.setyCoordinate(firstPointYCoordinate);
-        secondPoint.setxCoordinate(secondPointXCoordinate);
-        secondPoint.setyCoordinate(secondPointYCoordinate);
+        firstPoint.setXCoordinate(firstPointXCoordinate);
+        firstPoint.setYCoordinate(firstPointYCoordinate);
+        secondPoint.setXCoordinate(secondPointXCoordinate);
+        secondPoint.setYCoordinate(secondPointYCoordinate);
 
         LengthCount currentLength = new LengthCount();
         double length = currentLength.counterOfLength(firstPoint,secondPoint);

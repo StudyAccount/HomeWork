@@ -60,7 +60,7 @@ public class MusicShop {
             Iterator<Instrument> iterator = MusicShop.getInstruments().iterator();
             while (iterator.hasNext()){
                 Instrument instrument = iterator.next();
-                if (instrument.getName().equals(instrumentType)&& numberOfAnimalsRemoved <  numberOfInstrumentsToBeRemoved){
+                if (instrument.getName().equals(instrumentType) && numberOfAnimalsRemoved <  numberOfInstrumentsToBeRemoved){
                     iterator.remove();
                     numberOfAnimalsRemoved++;
                 }

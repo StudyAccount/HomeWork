@@ -7,9 +7,11 @@ package moduleFour.partThree;
  */
 public class LengthCount {
 
+    public static final int CONSTANT = 2;
+
     public double counterOfLength (Point first, Point second){
-        double currentLength = Math.sqrt(Math.pow(first.getxCoordinate() - second.getxCoordinate(),2) +
-                Math.pow(first.getyCoordinate() - second.getyCoordinate(),2));
+        double currentLength = Math.sqrt(Math.pow(first.getXCoordinate() - second.getXCoordinate(), CONSTANT) +
+                Math.pow(first.getYCoordinate() - second.getYCoordinate(), CONSTANT));
         return currentLength;
     }
 

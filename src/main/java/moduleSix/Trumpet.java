@@ -12,9 +12,4 @@ public class Trumpet extends Instrument {
     public String getName() {
         return "Trumpet";
     }
-    //    @Override
-//    public void setName(String name) {
-//        super.setName("Trumpet");
-//    }
-
 }

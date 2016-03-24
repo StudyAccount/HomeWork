@@ -13,9 +13,4 @@ public class Guitar extends Instrument {
     public String getName() {
         return "Guitar";
     }
-//    @Override
-//    public void setName(String name) {
-//        super.setName("Guitar");
-//    }
-
 }

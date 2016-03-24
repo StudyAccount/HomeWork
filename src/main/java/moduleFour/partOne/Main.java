@@ -28,14 +28,14 @@ public class Main {
         float secondTriangleSide = readFloat("Input second side length: ");
         float thirdTriangleSide = readFloat("Input third side length: ");
 
-        Triangle triangle = new Triangle(firstTriangleSide,secondTriangleSide,thirdTriangleSide);
+        Triangle triangle = new Triangle(firstTriangleSide, secondTriangleSide, thirdTriangleSide);
         triangle.setFirstSide(firstTriangleSide);
         triangle.setSecondSide(secondTriangleSide);
         triangle.setThirdSide(thirdTriangleSide);
 
         AreaCount countTriangleSquare = new AreaCount();
-        double squareOfTriangle = countTriangleSquare.triangleSquare(firstTriangleSide,secondTriangleSide,thirdTriangleSide);
-        System.out.println("Yours rectangle square is: "+ squareOfTriangle);
+        double squareOfTriangle = countTriangleSquare.triangleSquare(firstTriangleSide, secondTriangleSide, thirdTriangleSide);
+        System.out.println("Yours rectangle square is: " + squareOfTriangle);
 
 
 
@@ -48,8 +48,8 @@ public class Main {
         rectangle.setSecondSide(secondRectangleSide);
 
         AreaCount countRectangleArea = new AreaCount();
-        double squareOfRectangle = countRectangleArea.rectangleSquare(firstRectangleSide,secondRectangleSide);
-        System.out.println("Yours rectangle square is: "+ squareOfRectangle);
+        double squareOfRectangle = countRectangleArea.rectangleSquare(firstRectangleSide, secondRectangleSide);
+        System.out.println("Yours rectangle square is: " + squareOfRectangle);
 
         System.out.println("------------------Counting Triangle square-----------------");
 
@@ -59,7 +59,7 @@ public class Main {
 
         AreaCount countCircleArea = new AreaCount();
         double squareOfCircle = countCircleArea.circleSquare(circleRadius);
-        System.out.println("Yours rectangle square is: "+ squareOfCircle);
+        System.out.println("Yours rectangle square is: " + squareOfCircle);
 
 
     }

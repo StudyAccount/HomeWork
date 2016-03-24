@@ -7,6 +7,8 @@ package moduleFour.partOne;
  */
 public class AreaCount {
 
+    public static final int HERON_CONSTANT = 2;
+
     public double triangleSquare(double firstSide, double secondSide, double thirdSide){
 
         double square = 0;
@@ -15,14 +17,16 @@ public class AreaCount {
             throw new IllegalArgumentException("Triangle cannot have negative side[-s]");
         }
 
-        if ((firstSide + secondSide ) <= thirdSide || (firstSide + thirdSide) <= secondSide || (secondSide + thirdSide) <= firstSide){
+        if ((firstSide + secondSide ) <= thirdSide ||
+                (firstSide + thirdSide) <= secondSide ||
+                (secondSide + thirdSide) <= firstSide){
             try {
                 throw new WrongTriangleSidesException(firstSide, secondSide, thirdSide);
             } catch (WrongTriangleSidesException e) {
                 System.out.println("No one of triangle sides could be lager then the sum of another two");
             }
         }
-            double p = (firstSide + secondSide + thirdSide) / 2;
+            double p = (firstSide + secondSide + thirdSide) / HERON_CONSTANT;
             square = Math.sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));
 
         return square;
@@ -33,7 +37,7 @@ public class AreaCount {
         if (firstSide < 0 || secondSide < 0){
             throw new IllegalArgumentException("Rectangle cannot have negative side[-s]");
         }
-        return firstSide*secondSide;
+        return firstSide * secondSide;
     }
 
     public double circleSquare(double radius){

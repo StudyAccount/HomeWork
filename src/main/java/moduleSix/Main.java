@@ -1,6 +1,6 @@
 package moduleSix;
 
-import java.util.*;
+import java.util.Map;
 
 /**
  * Created by User on 17.03.2016.
@@ -35,8 +35,8 @@ public class Main {
         shop.availableInstruments();
 
         Map<String, Integer> order1 = shop.order;
-        order1.put("Guitar",4);
-        order1.put("Piano",1);
+        order1.put("Guitar", 4);
+        order1.put("Piano", 1);
 
         try {
             shop.prepareInstruments(order1);
@@ -48,7 +48,7 @@ public class Main {
         }
 
         Map<String, Integer> order2 = shop.order;
-        order2.put("Guitar",2);
+        order2.put("Guitar", 2);
 
         try {
             shop.prepareInstruments(order2);

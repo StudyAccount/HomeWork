@@ -13,8 +13,4 @@ public class Piano extends Instrument {
     public String getName() {
         return "Piano";
     }
-//    @Override
-//    public void setName(String name) {
-//        super.setName("Piano");
-//    }
 }
