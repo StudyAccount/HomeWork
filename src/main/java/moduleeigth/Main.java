@@ -1,4 +1,4 @@
-package moduleigth;
+package moduleeigth;
 
 /**
  * Created by User on 25.03.2016.
