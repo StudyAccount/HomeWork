@@ -1,8 +1,4 @@
-package moduleseven;
-
-import modulefive.Array;
-
-import java.util.ArrayList;
+package moduleigth;
 
 /**
  * Created by User on 25.03.2016.
@@ -64,7 +60,13 @@ public class Main {
         thirdFolder.placeFilesToDirectory(newVideo3);
         thirdFolder.placeFilesToDirectory(textFile3);
 
+        System.out.println("Files in second folder " + firstFolder.getDirectoryName() + " are:");
         PrintingCollection.printCollection(firstFolder);
+        System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
+        PrintingCollection.printCollection(secondFolder);
+        System.out.println("Files in second folder " + thirdFolder.getDirectoryName() + " are:");
+        PrintingCollection.printCollection(thirdFolder);
+
 
 
 

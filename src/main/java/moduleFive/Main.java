@@ -38,9 +38,7 @@ public class Main {
         System.out.println("Your input array is:");
         newArray.printArray(inputArray);
 
-        QuickSort makeSort = new QuickSort();
-
-        int[] outputArray = makeSort.quickSort(inputArray,0,inputArray.length - 1);
+        int[] outputArray = QuickSort.quickSort(inputArray, 0, inputArray.length - 1);
         System.out.println("Your sorted array is:");
         newArray.printArray(outputArray);
 

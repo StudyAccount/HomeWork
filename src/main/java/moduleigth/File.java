@@ -1,6 +1,4 @@
-package moduleseven;
-
-import java.lang.ref.SoftReference;
+package moduleigth;
 
 /**
  * Created by User on 24.03.2016.
