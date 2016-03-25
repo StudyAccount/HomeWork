@@ -30,12 +30,6 @@ public class Main {
         Directory firstFolder = new Directory();
         firstFolder.setDirectoryName("Music");
 
-        Directory secondFolder = new Directory();
-        secondFolder.setDirectoryName("Video");
-
-        Directory thirdFolder = new Directory();
-        thirdFolder.setDirectoryName("Trash");
-
         firstFolder.placeFilesToDirectory(audioTrack1);
         firstFolder.placeFilesToDirectory(audioTrack2);
         firstFolder.placeFilesToDirectory(audioTrack3);
@@ -43,12 +37,19 @@ public class Main {
         firstFolder.placeFilesToDirectory(audioTrack5);
         firstFolder.placeFilesToDirectory(audioTrack6);
 
+        Directory secondFolder = new Directory();
+        secondFolder.setDirectoryName("Video");
+
         secondFolder.placeFilesToDirectory(newVideo1);
         secondFolder.placeFilesToDirectory(newVideo2);
         secondFolder.placeFilesToDirectory(newVideo3);
         secondFolder.placeFilesToDirectory(newVideo4);
         secondFolder.placeFilesToDirectory(newVideo5);
         secondFolder.placeFilesToDirectory(newVideo6);
+
+        Directory thirdFolder = new Directory();
+        thirdFolder.setDirectoryName("Trash");
+
 
         thirdFolder.placeFilesToDirectory(newVideo1);
         thirdFolder.placeFilesToDirectory(textFile2);
@@ -60,12 +61,12 @@ public class Main {
         thirdFolder.placeFilesToDirectory(newVideo3);
         thirdFolder.placeFilesToDirectory(textFile3);
 
-        System.out.println("Files in second folder " + firstFolder.getDirectoryName() + " are:");
+        System.out.println("Files in first folder " + firstFolder.getDirectoryName() + " are:");
         PrintingCollection.printCollection(firstFolder);
-        System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
-        PrintingCollection.printCollection(secondFolder);
-        System.out.println("Files in second folder " + thirdFolder.getDirectoryName() + " are:");
-        PrintingCollection.printCollection(thirdFolder);
+//        System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
+//        PrintingCollection.printCollection(secondFolder);
+//        System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
+//        PrintingCollection.printCollection(thirdFolder);
 
 
 

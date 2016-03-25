@@ -1,4 +1,4 @@
-package moduleSix;
+package modulesix;
 
 import java.util.Map;
 

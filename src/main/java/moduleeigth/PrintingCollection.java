@@ -1,6 +1,7 @@
 package moduleeigth;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -9,7 +10,11 @@ import java.util.List;
 public class PrintingCollection {
 
     public static void printCollection(Directory folder) {
-        List<File> files = new ArrayList<File>();
+        Iterator<File> iterator  = Directory.getFiles().iterator();
+        while (iterator.hasNext()){
+            File file = iterator.next();
+            System.out.println("asd     "+ file.getLocation() + file.getName() + file.getExtension());
+        }
 
     }
 }

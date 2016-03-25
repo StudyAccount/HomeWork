@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Directory {
 
-    protected List<File> files = new ArrayList<File>();
+    protected static List<File> files = new ArrayList<File>();
     protected String directoryName;
 
     public String getDirectoryName() {
@@ -17,6 +17,10 @@ public class Directory {
 
     public void setDirectoryName(String directoryName) {
         this.directoryName = directoryName;
+    }
+
+    public static List<File> getFiles() {
+        return files;
     }
 
     public void placeFilesToDirectory(File file){
