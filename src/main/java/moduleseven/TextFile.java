@@ -6,7 +6,7 @@ package moduleseven;
 public class TextFile extends File {
     protected static final String TEXT = ".txt" ;
 
-    public TextFile(String location, String name, String extension, float size) {
+    public TextFile(String location, String name, String extension, int size) {
         super(location, name, extension, size);
     }
 

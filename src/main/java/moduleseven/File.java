@@ -9,10 +9,10 @@ import java.lang.ref.SoftReference;
 public abstract class File {
     protected String name;
     protected String extension;
-    protected float size;
+    protected int size;
     protected String location;
 
-    public File(String location, String name, String extension, float size) {
+    public File(String location, String name, String extension, int size) {
         this.location = location;
         this.name = name;
         this.extension = extension;
@@ -47,7 +47,7 @@ public abstract class File {
         this.extension = extension;
     }
 
-    public void setSize(float size) {
+    public void setSize(int size) {
         this.size = size;
     }
 }
