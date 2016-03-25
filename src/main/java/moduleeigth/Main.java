@@ -63,10 +63,10 @@ public class Main {
 
         System.out.println("Files in first folder " + firstFolder.getDirectoryName() + " are:");
         PrintingCollection.printCollection(firstFolder);
-//        System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
-//        PrintingCollection.printCollection(secondFolder);
-//        System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
-//        PrintingCollection.printCollection(thirdFolder);
+        System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
+        PrintingCollection.printCollection(secondFolder);
+        System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
+        PrintingCollection.printCollection(thirdFolder);
 
 
 

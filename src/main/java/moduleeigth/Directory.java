@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Directory {
 
-    protected static List<File> files = new ArrayList<File>();
+    protected List<File> files = new ArrayList<File>();
     protected String directoryName;
 
     public String getDirectoryName() {
@@ -19,7 +19,7 @@ public class Directory {
         this.directoryName = directoryName;
     }
 
-    public static List<File> getFiles() {
+    public List<File> getFiles() {
         return files;
     }
 
