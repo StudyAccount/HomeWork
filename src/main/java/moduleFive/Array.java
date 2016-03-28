@@ -1,4 +1,4 @@
-package modulefive;
+package moduleFive;
 
 import java.util.Random;
 
@@ -18,18 +18,25 @@ public class Array {
     }
 
     public int[] initArray(int size) {
+
         int[] inputArray = new int[size];
+
         for (int i = 0; i < size; i++) {
             Random rand = new Random();
             inputArray[i] = rand.nextInt();
         }
+
         return inputArray;
     }
 
-    public void printArray(int array[]) {
-        for (int i = 0; i < array.length - 1; i++) {
-            System.out.print(array[i] + ", ");
+    public void printArray(int[] array) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i : array) {
+            stringBuilder.append(i++ + ", ");
         }
-        System.out.println(array[array.length - 1]);
+
+        System.out.println(stringBuilder.toString());
     }
 }

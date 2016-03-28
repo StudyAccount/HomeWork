@@ -1,4 +1,4 @@
-package modulefive;
+package moduleFive;
 
 import static java.lang.Math.random;
 
@@ -7,34 +7,45 @@ import static java.lang.Math.random;
  */
 public class QuickSort {
 
-    public static int reshuffle(int array[], int first, int last) {
-        int i = first, j = last;
-        int temp;
-        int support = array[first + (int)(random() * ((last - first) + 1))];
+    public static int reshuffle(int array[], int firstIndex, int lastIndex) {
 
-        while (i <= j) {
-            while (array[i] < support)
-                i++;
-            while (array[j] > support)
-                j--;
-            if (i <= j) {
-                temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                i++;
-                j--;
+        int temp;
+        int numberOfSupportElement = firstIndex + (int)(random() * ((lastIndex - firstIndex) + 1));
+        int supportElement = array[numberOfSupportElement];
+
+        while (firstIndex <= lastIndex) {
+
+            while (array[firstIndex] < supportElement) {
+                firstIndex++;
+            }
+
+            while (array[lastIndex] > supportElement) {
+                lastIndex--;
+            }
+
+            if (firstIndex <= lastIndex) {
+                temp = array[firstIndex];
+                array[firstIndex] = array[lastIndex];
+                array[lastIndex] = temp;
+                firstIndex++;
+                lastIndex--;
             }
         };
 
-        return i;
+        return firstIndex;
     }
 
-    public static int[] quickSort(int array[], int first, int last) {
-        int index = reshuffle(array, first, last);
-        if (first < index - 1)
-            quickSort(array, first, index - 1);
-        if (index < last)
-            quickSort(array, index, last);
+    public static int[] quickSort(int array[], int firstIndex, int lastIndex) {
+
+        int calculatedIndex = reshuffle(array, firstIndex, lastIndex);
+
+        if (firstIndex < calculatedIndex - 1) {
+            quickSort(array, firstIndex, calculatedIndex - 1);
+        }
+
+        if (calculatedIndex < lastIndex) {
+            quickSort(array, calculatedIndex, lastIndex);
+        }
         return array;
     }
 }
