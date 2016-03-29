@@ -19,15 +19,12 @@ public class Main {
         }
     }
 
-    public static String chooseInput(String message){
-        System.out.println(message);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
-    }
-
     public static void main(String[] args) {
-
-        String selection = chooseInput("Choose what do you want to convert:\nCelsius press 1;\nFahrenheit press 2.");
+        System.out.println("Choose what do you want to convert:\n" +
+                "Celsius press 1;\n" +
+                "Fahrenheit press 2.");
+        Scanner scanner = new Scanner(System.in);
+        String selection = scanner.nextLine();
 
         if ("1".equals(selection)) {
 
@@ -54,7 +51,6 @@ public class Main {
             } else {
                 System.out.println("Entered incorrect value");
             }
-
         }
     }
 }
