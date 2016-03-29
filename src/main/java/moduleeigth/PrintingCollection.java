@@ -16,6 +16,7 @@ public class PrintingCollection {
         while (iteratorCounting.hasNext()){
             File file = iteratorCounting.next();
             int localMaxLength = file.getName().length();
+
             if (localMaxLength > maxLength){
                 maxLength = localMaxLength;
             }
@@ -28,8 +29,8 @@ public class PrintingCollection {
             counter = ++counter;
             System.out.print("| " + counter + "\t|");
             System.out.printf("%-20s", file.getName());
-            System.out.print("|" + file.getExtension()+ "\t |");
-            System.out.printf("%-8s", file.size);
+            System.out.print("|" + file.getExtension() + "\t|");
+            System.out.printf("%-8s", file.getSize());
             System.out.println("|");
         }
 

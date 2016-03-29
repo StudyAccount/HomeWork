@@ -5,10 +5,10 @@ package moduleeigth;
  */
 
 public abstract class File {
-    protected String name;
-    protected String extension;
-    protected int size;
-    protected String location;
+    private String name;
+    private String extension;
+    private int size;
+    private String location;
 
     public File(String location, String name, String extension, int size) {
         this.location = location;

@@ -8,20 +8,8 @@ import java.util.List;
  */
 public class Directory {
 
-    protected List<File> files = new ArrayList<File>();
-    protected String directoryName;
-
-    public String getDirectoryName() {
-        return directoryName;
-    }
-
-    public void setDirectoryName(String directoryName) {
-        this.directoryName = directoryName;
-    }
-
-    public List<File> getFiles() {
-        return files;
-    }
+    private List<File> files = new ArrayList<File>();
+    private String directoryName;
 
     public void placeFilesToDirectory(File file){
         if (files.contains(file)) {
@@ -35,5 +23,17 @@ public class Directory {
     public void deleteFilesFromDirectory(File file){
         files.remove(file);
         file.setLocation("No location");
+    }
+
+    public String getDirectoryName() {
+        return directoryName;
+    }
+
+    public void setDirectoryName(String directoryName) {
+        this.directoryName = directoryName;
+    }
+
+    public List<File> getFiles() {
+        return files;
     }
 }

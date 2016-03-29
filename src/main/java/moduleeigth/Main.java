@@ -50,7 +50,6 @@ public class Main {
         Directory thirdFolder = new Directory();
         thirdFolder.setDirectoryName("Trash");
 
-
         thirdFolder.placeFilesToDirectory(newVideo1);
         thirdFolder.placeFilesToDirectory(textFile2);
         thirdFolder.placeFilesToDirectory(audioTrack5);
@@ -61,22 +60,17 @@ public class Main {
         thirdFolder.placeFilesToDirectory(newVideo3);
         thirdFolder.placeFilesToDirectory(textFile3);
 
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         System.out.println("Files in first folder " + firstFolder.getDirectoryName() + " are:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         PrintingCollection.printCollection(firstFolder);
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         PrintingCollection.printCollection(secondFolder);
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
-        System.out.println("----------------------------------------------------");
+        System.out.println("-------------------------------------------");
         PrintingCollection.printCollection(thirdFolder);
-
-
-
-
-
     }
 }
