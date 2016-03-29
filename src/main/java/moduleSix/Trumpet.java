@@ -5,6 +5,6 @@ package moduleSix;
  */
 public class Trumpet extends Instrument {
     public Trumpet(String name, String manufacturer, int price) {
-        super(String.valueOf(InstrumentName.Trumpet), manufacturer, price);
+        super(String.valueOf(InstrumentName.TRUMPET), manufacturer, price);
     }
 }

@@ -45,6 +45,6 @@ public abstract class Instrument {
     }
 
     enum InstrumentName{
-        Guitar, Trumpet, Piano
+        GUITAR, TRUMPET, PIANO
     }
 }

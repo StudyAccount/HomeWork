@@ -6,6 +6,6 @@ package moduleSix;
 public class Guitar extends Instrument {
 
     public Guitar(String name, String manufacturer, int price){
-        super(String.valueOf(InstrumentName.Guitar), manufacturer, price);
+        super(String.valueOf(InstrumentName.GUITAR), manufacturer, price);
     }
 }

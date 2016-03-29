@@ -8,20 +8,20 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) {
-        Instrument instrument = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument2 = new Guitar("Guitar", "Cord", 2235);
-        Instrument instrument3 = new Piano("Piano", "Mason&Hamlin", 1235);
-        Instrument instrument4 = new Trumpet("Trumpet", "Sovok", 123);
-        Instrument instrument5 = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument6 = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument7 = new Piano("Piano", "Mason&Hamlin", 1235);
-        Instrument instrument8 = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument9 = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument10 = new Piano("Piano", "Mason&Hamlin", 1235);
-        Instrument instrument11 = new Guitar("Guitar", "Yamaha", 1235);
-        Instrument instrument12 = new Trumpet("Trumpet", "Sovok", 123);
-        Instrument instrument13 = new Guitar("Guitar", "Cord", 2235);
-        Instrument instrument14 = new Trumpet("Trumpet", "S&B", 123);
+        Instrument instrument = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument2 = new Guitar("GUITAR", "Cord", 2235);
+        Instrument instrument3 = new Piano("PIANO", "Mason&Hamlin", 1235);
+        Instrument instrument4 = new Trumpet("TRUMPET", "Sovok", 123);
+        Instrument instrument5 = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument6 = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument7 = new Piano("PIANO", "Mason&Hamlin", 1235);
+        Instrument instrument8 = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument9 = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument10 = new Piano("PIANO", "Mason&Hamlin", 1235);
+        Instrument instrument11 = new Guitar("GUITAR", "Yamaha", 1235);
+        Instrument instrument12 = new Trumpet("TRUMPET", "Sovok", 123);
+        Instrument instrument13 = new Guitar("GUITAR", "Cord", 2235);
+        Instrument instrument14 = new Trumpet("TRUMPET", "S&B", 123);
 
         MusicShop shop = new MusicShop();
         shop.addInstrument(instrument);
@@ -38,8 +38,8 @@ public class Main {
         shop.availableInstruments();
 
         Map<String, Integer> order1 = new HashMap<String, Integer>();
-        order1.put("Guitar", 4);
-        order1.put("Piano", 1);
+        order1.put("GUITAR", 4);
+        order1.put("PIANO", 1);
 
         try {
             shop.prepareInstruments(order1);
@@ -51,9 +51,9 @@ public class Main {
         }
 
         Map<String, Integer> order2 = new HashMap<String, Integer>();
-        order2.put("Trumpet", 1);
-        order2.put("Piano",1);
-        order2.put("Guitar", 1);
+        order2.put("TRUMPET", 1);
+        order2.put("PIANO",1);
+        order2.put("GUITAR", 1);
 
         try {
             shop.prepareInstruments(order2);
@@ -65,7 +65,7 @@ public class Main {
         }
 
         Map<String, Integer> order3 = new HashMap<String, Integer>();
-        order3.put("Piano",1);
+        order3.put("PIANO",1);
 
         try {
             shop.prepareInstruments(order3);
