@@ -20,36 +20,45 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("Choose what do you want to convert:\n" +
-                "Celsius press 1;\n" +
-                "Fahrenheit press 2.");
-        Scanner scanner = new Scanner(System.in);
-        String selection = scanner.nextLine();
+        while (true) {
 
-        if ("1".equals(selection)) {
+            System.out.println("\n----------------------------------------------------");
+            System.out.println("Choose what do you want to convert:\n" +
+                    "Celsius press 1;\n" +
+                    "Fahrenheit press 2;\n" +
+                    "exit press q");
+            Scanner scanner = new Scanner(System.in);
+            String selection = scanner.nextLine();
 
-            float currentTemperature = readFloat("Enter the temperature in Celsius: ");
+            if ("1".equals(selection)) {
 
-            Temperature temperatureInCelsius = new Temperature(currentTemperature);
-            temperatureInCelsius.setTemperature(currentTemperature);
+                float currentTemperature = readFloat("Enter the temperature in Celsius: ");
 
-            TemperatureConverter temperatureInFahrenheit = new TemperatureConverter();
-            float result = temperatureInFahrenheit.convertCelsiusToFahrenheit(temperatureInCelsius);
-            System.out.println("Current temperature in Fahrenheit is " + result);
+                Temperature temperatureInCelsius = new Temperature(currentTemperature);
+                temperatureInCelsius.setTemperature(currentTemperature);
 
-        } else {
+                TemperatureConverter temperatureInFahrenheit = new TemperatureConverter();
+                float result = temperatureInFahrenheit.convertCelsiusToFahrenheit(temperatureInCelsius);
+                System.out.println("Current temperature in Fahrenheit is " + result);
 
-            if ("2".equals(selection)) {
-                float currentTemperature = readFloat("Enter the temperature in Fahrenheit: ");
-
-                Temperature temperatureInFahrenheit = new Temperature(currentTemperature);
-                temperatureInFahrenheit.setTemperature(currentTemperature);
-
-                TemperatureConverter temperatureInCelsius = new TemperatureConverter();
-                float result = temperatureInCelsius.convertFahrenheitToCelsius(temperatureInFahrenheit);
-                System.out.println("Current temperature in Celsius is " + result);
             } else {
-                System.out.println("Entered incorrect value");
+
+                if ("2".equals(selection)) {
+                    float currentTemperature = readFloat("Enter the temperature in Fahrenheit: ");
+
+                    Temperature temperatureInFahrenheit = new Temperature(currentTemperature);
+                    temperatureInFahrenheit.setTemperature(currentTemperature);
+
+                    TemperatureConverter temperatureInCelsius = new TemperatureConverter();
+                    float result = temperatureInCelsius.convertFahrenheitToCelsius(temperatureInFahrenheit);
+                    System.out.println("Current temperature in Celsius is " + result);
+                } else {
+                    if ("q".equals(selection)) {
+                        break;
+                    } else {
+                        System.out.println("Entered incorrect value");
+                    }
+                }
             }
         }
     }
