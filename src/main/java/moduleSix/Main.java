@@ -1,5 +1,6 @@
-package modulesix;
+package moduleSix;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -30,11 +31,13 @@ public class Main {
         shop.addInstrument(instrument5);
         shop.addInstrument(instrument6);
         shop.addInstrument(instrument8);
+        shop.addInstrument(instrument10);
+        shop.addInstrument(instrument13);
 
         System.out.println("<<< Instruments in the shop >>>");
         shop.availableInstruments();
 
-        Map<String, Integer> order1 = shop.order;
+        Map<String, Integer> order1 = new HashMap<String, Integer>();
         order1.put("Guitar", 4);
         order1.put("Piano", 1);
 
@@ -47,12 +50,26 @@ public class Main {
             System.err.println(e.getMessage());
         }
 
-        Map<String, Integer> order2 = shop.order;
-        order2.put("Guitar", 2);
+        Map<String, Integer> order2 = new HashMap<String, Integer>();
+        order2.put("Trumpet", 1);
+        order2.put("Piano",1);
+        order2.put("Guitar", 1);
 
         try {
             shop.prepareInstruments(order2);
             shop.sellInstruments(order2);
+            System.out.println("<<< Instruments in the shop after 2 order >>>");
+            shop.availableInstruments();
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+        }
+
+        Map<String, Integer> order3 = new HashMap<String, Integer>();
+        order3.put("Piano",1);
+
+        try {
+            shop.prepareInstruments(order3);
+            shop.sellInstruments(order3);
             System.out.println("<<< Instruments in the shop after 2 order >>>");
             shop.availableInstruments();
         } catch (Exception e){

@@ -1,15 +1,15 @@
-package modulesix;
+package moduleSix;
 
 /**
  * Created by User on 17.03.2016.
  */
 public abstract class Instrument {
 
-    protected String name;
-    protected String manufacturer;
-    protected int price;
+    private String name;
+    private String manufacturer;
+    private int price;
 
-    public Instrument(String name,String manufacturer, int price){
+    public Instrument(String name, String manufacturer, int price){
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
@@ -39,8 +39,12 @@ public abstract class Instrument {
         return price;
     }
 
-    public void lot(){
-        System.out.println("* " + name + " " + manufacturer + " " + price);
+    @Override
+    public String toString() {
+        return ("*** " + name + " " + manufacturer + " " + price);
     }
 
+    enum InstrumentName{
+        Guitar, Trumpet, Piano
+    }
 }

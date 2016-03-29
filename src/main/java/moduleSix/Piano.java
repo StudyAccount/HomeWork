@@ -1,4 +1,4 @@
-package modulesix;
+package moduleSix;
 
 /**
  * Created by User on 17.03.2016.
@@ -6,11 +6,6 @@ package modulesix;
 public class Piano extends Instrument {
 
     public Piano(String name, String manufacturer, int price) {
-        super("Piano", manufacturer, price);
-    }
-
-    @Override
-    public String getName() {
-        return "Piano";
+        super(String.valueOf(InstrumentName.Piano), manufacturer, price);
     }
 }
