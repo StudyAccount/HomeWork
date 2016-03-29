@@ -53,9 +53,11 @@ public class Main {
                     float result = temperatureInCelsius.convertFahrenheitToCelsius(temperatureInFahrenheit);
                     System.out.println("Current temperature in Celsius is " + result);
                 } else {
+
                     if ("q".equals(selection)) {
                         break;
                     } else {
+
                         System.out.println("Entered incorrect value");
                     }
                 }

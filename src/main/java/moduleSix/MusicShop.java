@@ -28,7 +28,7 @@ public class MusicShop {
             }
 
             if (numberOfInstrumentsShouldBeRemoved < numberOfInstrumentsToBeRemoved) {
-                throw new IllegalArgumentException("Shop does not have enough " + instrumentType +
+                throw new NotEnoughInstrumentsException("Shop does not have enough " + instrumentType +
                         "s for order " + order.entrySet() + "\n"
                         + "Available " + instrumentType + "s are: " + numberOfInstrumentsShouldBeRemoved);
             }
