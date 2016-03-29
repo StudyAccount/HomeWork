@@ -26,16 +26,11 @@ public class Main {
         int secondPointXCoordinate = readInt("Enter second x coordinate: ");
         int secondPointYCoordinate = readInt("Enter second y coordinate: ");
 
-        Point firstPoint = new Point(firstPointXCoordinate,firstPointYCoordinate);
-        Point secondPoint = new Point(secondPointXCoordinate,secondPointYCoordinate);
-
-        firstPoint.setXCoordinate(firstPointXCoordinate);
-        firstPoint.setYCoordinate(firstPointYCoordinate);
-        secondPoint.setXCoordinate(secondPointXCoordinate);
-        secondPoint.setYCoordinate(secondPointYCoordinate);
+        Point firstPoint = new Point(firstPointXCoordinate, firstPointYCoordinate);
+        Point secondPoint = new Point(secondPointXCoordinate, secondPointYCoordinate);
 
         LengthCount currentLength = new LengthCount();
-        double length = currentLength.counterOfLength(firstPoint,secondPoint);
+        double length = currentLength.counterOfLength(firstPoint, secondPoint);
         System.out.println(length);
 
     }

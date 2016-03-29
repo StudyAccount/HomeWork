@@ -1,7 +1,5 @@
 package moduleFour.partThree;
 
-//import static java.lang.Math.*;
-
 /**
  * Created by User on 13.03.2016.
  */

@@ -29,36 +29,32 @@ public class Main {
         float thirdTriangleSide = readFloat("Input third side length: ");
 
         Triangle triangle = new Triangle(firstTriangleSide, secondTriangleSide, thirdTriangleSide);
-        triangle.setFirstSide(firstTriangleSide);
-        triangle.setSecondSide(secondTriangleSide);
-        triangle.setThirdSide(thirdTriangleSide);
 
         AreaCount countTriangleSquare = new AreaCount();
-        double squareOfTriangle = countTriangleSquare.triangleSquare(firstTriangleSide, secondTriangleSide, thirdTriangleSide);
+        double squareOfTriangle = countTriangleSquare.triangleSquare(triangle);
         System.out.println("Yours rectangle square is: " + squareOfTriangle);
-
-
 
         System.out.println("------------------Counting Rectangle square-----------------");
 
         float firstRectangleSide = readFloat("Input first side length: ");
         float secondRectangleSide = readFloat("Input second side length: ");
-        Rectangle rectangle = new Rectangle(firstRectangleSide,secondRectangleSide);
-        rectangle.setFirstSide(firstRectangleSide);
-        rectangle.setSecondSide(secondRectangleSide);
+
+        Rectangle rectangle = new Rectangle(firstRectangleSide, secondRectangleSide);
 
         AreaCount countRectangleArea = new AreaCount();
-        double squareOfRectangle = countRectangleArea.rectangleSquare(firstRectangleSide, secondRectangleSide);
+
+        double squareOfRectangle = countRectangleArea.rectangleSquare(rectangle);
         System.out.println("Yours rectangle square is: " + squareOfRectangle);
 
         System.out.println("------------------Counting Triangle square-----------------");
 
-        float circleRadius = readFloat("Input radius: 3");
+        float circleRadius = readFloat("Input radius: ");
+
         Circle circle = new Circle(circleRadius);
-        circle.setRadius(circleRadius);
 
         AreaCount countCircleArea = new AreaCount();
-        double squareOfCircle = countCircleArea.circleSquare(circleRadius);
+
+        double squareOfCircle = countCircleArea.circleSquare(circle);
         System.out.println("Yours rectangle square is: " + squareOfCircle);
 
 
