@@ -1,8 +1,6 @@
 package moduleeigth;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * Created by User on 25.03.2016.
@@ -11,23 +9,29 @@ public class PrintingCollection {
 
     public static void printCollection(Directory folder)
     {
-        Iterator<File> iterator  = folder.getFiles().iterator();
+        Iterator<File> iteratorCounting  = folder.getFiles().iterator();
         int maxLength = 0;
         int counter = 0;
-        while (iterator.hasNext()){
-            File file = iterator.next();
-            int localMaxLength = file.getName().length();
 
+        while (iteratorCounting.hasNext()){
+            File file = iteratorCounting.next();
+            int localMaxLength = file.getName().length();
             if (localMaxLength > maxLength){
                 maxLength = localMaxLength;
             }
-            counter = ++counter;
-
-            System.out.println("| "+ counter + "\t|" + file.getName() + "\t | \t" + file.getExtension()+ "\t | \t" + file.size + "\t | \t" );
         }
-        System.out.println( maxLength);
 
+        Iterator<File> iteratorPrinting = folder.getFiles().iterator();
 
+        while (iteratorPrinting.hasNext()){
+            File file = iteratorPrinting.next();
+            counter = ++counter;
+            System.out.print("| " + counter + "\t|");
+            System.out.printf("%-20s", file.getName());
+            System.out.print("|" + file.getExtension()+ "\t |");
+            System.out.printf("%-8s", file.size);
+            System.out.println("|");
+        }
 
 
     }
