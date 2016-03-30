@@ -1,10 +1,12 @@
 package moduleeigth;
 
+import java.util.Comparator;
+
 /**
  * Created by User on 24.03.2016.
  */
 
-public abstract class File {
+public abstract class File implements Comparable{
     private String name;
     private String extension;
     private int size;
@@ -47,5 +49,12 @@ public abstract class File {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    @Override
+    public int compareTo(Object object) {
+        File entry = (File) object;
+        return name.compareTo(entry.name);
+
     }
 }

@@ -81,7 +81,9 @@ public class Main {
         System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
         System.out.println("-------------------------------------------");
 
-        SortedDirectory.fillSortedSet(thirdFolder);
-        PrintingCollection.printCollection(thirdFolder);
+        SortedDirectory folder = new SortedDirectory();
+
+        folder.fillSortedSet(thirdFolder);
+        PrintingCollection.printSortedCollection(folder);
     }
 }

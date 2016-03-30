@@ -35,19 +35,19 @@ public class PrintingCollection {
         }
     }
 
-//    public static void  printSortedCollection(SortedDirectory folder){
-//        Iterator<File> iteratorPrinting = folder.getFiles().iterator();
-//        int counter = 0;
-//
-//        while (iteratorPrinting.hasNext()){
-//            File file = iteratorPrinting.next();
-//            counter = ++counter;
-//            System.out.print("| " + counter + "\t|");
-//            System.out.printf("%-20s", file.getName());
-//            System.out.print("|" + file.getExtension() + "\t|");
-//            System.out.printf("%-8s", file.getSize());
-//            System.out.println("|");
-//        }
-//
-//    }
+    public static void  printSortedCollection(SortedDirectory folder){
+        Iterator<File> iteratorPrinting = folder.getSortedFiles().iterator();
+        int counter = 0;
+
+        while (iteratorPrinting.hasNext()){
+            File file = iteratorPrinting.next();
+            counter = ++counter;
+            System.out.print("| " + counter + "\t|");
+            System.out.printf("%-20s", file.getName());
+            System.out.print("|" + file.getExtension() + "\t|");
+            System.out.printf("%-8s", file.getSize());
+            System.out.println("|");
+        }
+
+    }
 }
