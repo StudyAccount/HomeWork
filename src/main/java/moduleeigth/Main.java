@@ -1,5 +1,10 @@
 package moduleeigth;
 
+import javafx.collections.transformation.SortedList;
+
+import java.util.List;
+import java.util.SortedSet;
+
 /**
  * Created by User on 25.03.2016.
  */
@@ -63,14 +68,20 @@ public class Main {
         System.out.println("-------------------------------------------");
         System.out.println("Files in first folder " + firstFolder.getDirectoryName() + " are:");
         System.out.println("-------------------------------------------");
+
         PrintingCollection.printCollection(firstFolder);
+
         System.out.println("-------------------------------------------");
         System.out.println("Files in second folder " + secondFolder.getDirectoryName() + " are:");
         System.out.println("-------------------------------------------");
+
         PrintingCollection.printCollection(secondFolder);
+
         System.out.println("-------------------------------------------");
         System.out.println("Files in third folder " + thirdFolder.getDirectoryName() + " are:");
         System.out.println("-------------------------------------------");
+
+        SortedDirectory.fillSortedSet(thirdFolder);
         PrintingCollection.printCollection(thirdFolder);
     }
 }
