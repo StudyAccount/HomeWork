@@ -10,7 +10,7 @@ import moduleeigth.File;
 public class Main {
     public static void main(String[] args) {
         int encryptionCode = 13;
-        CaesarEncryption cryptographyExample = new CaesarEncryption();
+        CaesarCryptography cryptographyExample = new CaesarCryptography();
 
         File audioTrack1 = new AudioFile("", "Nigthwish", ".mp3", 323);
         File audioTrack2 = new AudioFile("", "Linkin Park", ".mp3", 419);

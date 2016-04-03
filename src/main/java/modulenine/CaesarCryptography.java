@@ -3,7 +3,7 @@ package modulenine;
 /**
  * Created by User on 03.04.2016.
  */
-public class CaesarEncryption {
+public class CaesarCryptography {
     private final int ASCII_DIGIT_0 = 48;
     private final int ASCII_UPPER_A = 65;
     private final int ASCII_LOWER_A = 97;
@@ -93,6 +93,7 @@ public class CaesarEncryption {
 
         return stringBuilder.charAt(0);
     }
+
 
     public static char decodedCycleOfProcessingData(char character, int firstSymbolInASCII, int alphabetSize, int key){
         StringBuilder stringBuilder = new StringBuilder();
