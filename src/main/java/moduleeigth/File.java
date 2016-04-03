@@ -1,7 +1,5 @@
 package moduleeigth;
 
-import java.util.Comparator;
-
 /**
  * Created by User on 24.03.2016.
  */
@@ -57,4 +55,10 @@ public abstract class File implements Comparable{
         return name.compareTo(entry.name);
 
     }
+
+    @Override
+    public String toString() {
+        return name + extension + ", " + size + ", " + location;
+    }
+
 }
