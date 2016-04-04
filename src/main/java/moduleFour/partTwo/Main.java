@@ -35,7 +35,6 @@ public class Main {
                 float currentTemperature = readFloat("Enter the temperature in Celsius: ");
 
                 Temperature temperatureInCelsius = new Temperature(currentTemperature);
-                temperatureInCelsius.setTemperature(currentTemperature);
 
                 TemperatureConverter temperatureInFahrenheit = new TemperatureConverter();
                 float result = temperatureInFahrenheit.convertCelsiusToFahrenheit(temperatureInCelsius);
@@ -47,7 +46,6 @@ public class Main {
                     float currentTemperature = readFloat("Enter the temperature in Fahrenheit: ");
 
                     Temperature temperatureInFahrenheit = new Temperature(currentTemperature);
-                    temperatureInFahrenheit.setTemperature(currentTemperature);
 
                     TemperatureConverter temperatureInCelsius = new TemperatureConverter();
                     float result = temperatureInCelsius.convertFahrenheitToCelsius(temperatureInFahrenheit);
