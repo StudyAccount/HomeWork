@@ -80,7 +80,7 @@ public class CaesarCryptography {
     public static char encodedCycleOfProcessingData(char character, int firstSymbolInASCII, int alphabetSize, int key){
         StringBuilder stringBuilder = new StringBuilder();
 
-        int asciiCodeOfCharacter = (character - firstSymbolInASCII - key) % alphabetSize;
+        int asciiCodeOfCharacter = (character - firstSymbolInASCII + key) % alphabetSize;
         int myCodeOfCharacter = asciiCodeOfCharacter + firstSymbolInASCII;
 
         if (asciiCodeOfCharacter >= 0) {
