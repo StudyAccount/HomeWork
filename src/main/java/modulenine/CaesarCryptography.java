@@ -4,11 +4,11 @@ package modulenine;
  * Created by User on 03.04.2016.
  */
 public class CaesarCryptography {
-    private final int ASCII_DIGIT_0 = 48;
-    private final int ASCII_UPPER_A = 65;
-    private final int ASCII_LOWER_A = 97;
-    private final int ALPHABET_LENGTH = 26;
-    private final int NUMERALS_SIZE = 10;
+    private static final int ASCII_DIGIT_0 = 48;
+    private static final int ASCII_UPPER_A = 65;
+    private static final int ASCII_LOWER_A = 97;
+    private static final int ALPHABET_LENGTH = 26;
+    private static final int NUMERALS_SIZE = 10;
     //private final int ASCII_SPECIAL_CHARACTER_FIRST = 32;
     //private final int NUMBER_OF_SPECIAL_CHARACTERS = 16;
 
