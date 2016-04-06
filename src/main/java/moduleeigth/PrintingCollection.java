@@ -26,12 +26,10 @@ public class PrintingCollection {
 
         while (iteratorPrinting.hasNext()){
             File file = iteratorPrinting.next();
+
             counter = ++counter;
-            System.out.print("| " + counter + "\t|");
-            System.out.printf("%-20s", file.getName());
-            System.out.print("|" + file.getExtension() + "\t|");
-            System.out.printf("%-8s", file.getSize());
-            System.out.println("|");
+            System.out.printf("| %d\t| %-20s | %s\t| %-8s |\n", counter, file.getName(),
+                    file.getExtension(), file.getSize());
         }
     }
 
@@ -42,11 +40,9 @@ public class PrintingCollection {
         while (iteratorPrinting.hasNext()){
             File file = iteratorPrinting.next();
             counter = ++counter;
-            System.out.print("| " + counter + "\t|");
-            System.out.printf("%-20s", file.getName());
-            System.out.print("|" + file.getExtension() + "\t|");
-            System.out.printf("%-8s", file.getSize());
-            System.out.println("|");
+            System.out.printf("| %d\t| %-20s | %s\t| %-8s |\n", counter, file.getName(),
+                    file.getExtension(), file.getSize());
+
         }
 
     }
