@@ -1,11 +1,11 @@
 package moduleFour.partOne;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static java.lang.Math.*;
-import static org.junit.Assert.*;
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by User on 07.04.2016.
@@ -17,8 +17,9 @@ public class AreaCountTest {
     @BeforeClass
     public static void setUpClass() throws Exception {
         areaCount = new AreaCount();
-
     }
+
+
 
     @Test (timeout = 1000)
     public void testTriangleSquare() throws Exception {
@@ -26,7 +27,6 @@ public class AreaCountTest {
         double b = 13;
         double c = 10;
         double expectation = 60;
-
 
         final Triangle triangle = new Triangle(a, b, c);
 
