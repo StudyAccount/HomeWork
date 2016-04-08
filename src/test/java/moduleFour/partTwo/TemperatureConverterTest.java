@@ -16,7 +16,7 @@ public class TemperatureConverterTest {
         temperatureConverter = new TemperatureConverter();
     }
 
-    @Test
+    @Test (timeout = 1000)
     public void testConvertCelsiusToFahrenheit() throws Exception {
         float celsius = 0;
         float expectation = 32;
@@ -28,7 +28,7 @@ public class TemperatureConverterTest {
 
     }
 
-    @Test
+    @Test (timeout = 1000)
     public void testConvertFahrenheitToCelsius() throws Exception {
         float fahrenheit = 32;
         float expectation = 0;

@@ -41,7 +41,7 @@ public class LengthCountTest {
         });
     }
 
-    @Test
+    @Test (timeout = 1000)
     public void testCounterOfLength() throws Exception {
         final Point firstPoint = new Point(firstPointXCoordinate, firstPointYCoordinate);
         final Point secondPoint = new Point(secondPointXCoordinate, secondPointYCoordinate);
