@@ -1,13 +1,13 @@
 package moduleFour.partThree;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 
-import static java.lang.Math.*;
+import static java.lang.Math.sqrt;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by User on 07.04.2016.
@@ -46,6 +46,6 @@ public class LengthCountTest {
         final Point firstPoint = new Point(firstPointXCoordinate, firstPointYCoordinate);
         final Point secondPoint = new Point(secondPointXCoordinate, secondPointYCoordinate);
         final double result = lengthCount.counterOfLength(firstPoint, secondPoint);
-        Assert.assertEquals(expectation, result, 0.0001);
+        assertEquals(expectation, result, 0.0001);
     }
 }

@@ -17,7 +17,7 @@ public class CaesarCryptographyTest {
         caesarCryptography = new CaesarCryptography();
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void testEncode() throws Exception {
         int key = 3;
         String string = "AbcD";
@@ -28,7 +28,7 @@ public class CaesarCryptographyTest {
     }
 
 
-    @Test
+    @Test(timeout = 1000)
     public void testDecode() throws Exception {
         int key = 2;
         String string = "CdEf";
